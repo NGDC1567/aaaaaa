@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Exemplo de formulário</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+</head>
+<body>
+    <p>Login</p>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        
+        <label for="email">Email</label>
+        {{ form.email.label }}
+        {{ form.email() }}
+
+        <br>
+        
+        <label for="password">Senha</label>
+        {{ form.password.label }}
+        {{ form.password() }}
+        
+        <br>
+
+        {{ form.submit() }}
+    </form>
+    <a href="{{url_for('sign')}}">"sign"</a>
+</body>
+</html>
+
